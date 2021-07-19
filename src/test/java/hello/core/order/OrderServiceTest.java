@@ -12,7 +12,6 @@ public class OrderServiceTest {
     MemberService memberService = new MemberServiceImpl();
     OrderService orderService = new OrderServiceImpl();
 
-    //test
     @Test
     void createOrder() {
         Long memberId = 1L;
