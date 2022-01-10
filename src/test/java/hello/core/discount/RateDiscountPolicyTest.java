@@ -15,7 +15,7 @@ class RateDiscountPolicyTest {
     RateDiscountPolicy discountPolicy = new RateDiscountPolicy();
 
     @Test
-    @DisplayName("VIP는 10% 할인이 적용되어야 한다.")  //Junit5부터 지원하는 기 / 한글가능 / TEST
+    @DisplayName("VIP는 10% 할인이 적용되어야 한다.")  //Junit5부터 지원하는 기 / 한글가능
     void vip_o() {
         //given
         Member member = new Member(1L,"memberVIP", Grade.VIP);
