@@ -6,14 +6,15 @@ import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
 import hello.core.order.Order;
 import hello.core.order.OrderService;
-import hello.core.order.OrderServiceImpl;
+import hello.core.order.pl;
 
 public class OrderApp {
 
     public static void main(String[] args) {
 
-        MemberService memberService = new MemberServiceImpl(null);
-        OrderService orderService = new OrderServiceImpl(null, null);
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+        OrderService orderService = appConfig.orderService();
 
         Long memberId = 1L;
 
@@ -22,8 +23,7 @@ public class OrderApp {
 
         Order order = orderService.createOrder(memberId,"itemA", 10000);
 
-        System.out.println("order == "+ order.toString());
-        System.out.println("order.calculatePrice == "+ order.calculatePrice());
+        System.out.println("order = " + order);
 
     }
 }
