@@ -24,7 +24,7 @@ public class SingletonTest {
         System.out.println("memberService2 = " + memberService2);
 
 //        memberService1 != memberService2
-//        결과 : 호출할 때마다 새로운 객체를 계속 상성함
+//        결과 : 호출할 때마다 새로운 객체를 계속 생성함
 //        해결방안 : 해당 객체를 한개만 생성하고, 공유하도록 설계함 -> 싱글톤 패턴
         Assertions.assertThat(memberService1).isNotSameAs(memberService2);
     }
