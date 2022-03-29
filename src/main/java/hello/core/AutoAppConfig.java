@@ -1,0 +1,12 @@
+package hello.core;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.FilterType;
+
+@Configuration
+@ComponentScan(  // 스프링빈을 긁어서 끌고오는거 // 쭉 긇어오는데 스프링빈으로 등록안할 것을(여기선 Configuration.class) 지정해주는 것
+        excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Configuration.class)
+)
+public class AutoAppConfig {
+}
