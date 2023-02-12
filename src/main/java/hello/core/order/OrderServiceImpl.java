@@ -1,5 +1,6 @@
 package hello.core.order;
 
+import hello.core.annotation.MainDiscountPolicy;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
@@ -24,7 +25,7 @@ public class OrderServiceImpl implements OrderService {
 //    @Qualifier는 @Qualifier를 사용하는 부분에서만 (자기들끼리) 사용하는게 명확하고 좋음
 //    @Qualifier는 추가 옵션정도로 생
     @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
